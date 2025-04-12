@@ -2252,7 +2252,6 @@ function startVideo() {
     videoContainer.show();
   }
 
-    videoContainer = createDiv();
     videoContainer.id("video-container");
     videoContainer.style("position", "absolute");
     videoContainer.style("top", "50%");
