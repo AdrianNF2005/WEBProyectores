@@ -2252,8 +2252,8 @@ function startVideo() {
     videoContainer.style("top", "50%");
     videoContainer.style("left", "50%");
     videoContainer.style("transform", "translate(-50%, -50%)");
-    videoContainer.style("width", windowWidth + "px");
-    videoContainer.style("height", windowHeight + "px");
+    videoContainer.style("width", 1920 + "px");
+    videoContainer.style("height", 1200 + "px");
     videoContainer.style("z-index", "10");
   } else {
     videoContainer.show();
