@@ -188,7 +188,7 @@ let imageSlideCounter = 0;
 let mode = "blackScreen"; // Empezamos con pantalla negra
 let imageTimer = 0;
 let blackScreenDuration = 1000; // 5 segundos de pantalla negra
-let imageDisplayDuration = 40000; // Duración de cada imagen (40 segundos)
+let imageDisplayDuration = 15000; // Duración de cada imagen (40 segundos)
 let ytApiReady = false;
 let player;
 let videoContainer;
@@ -199,7 +199,7 @@ let transitioning = false;
 let ImagePrev;
 let ImagePrev2;
 
-let TiempoUnderProyector = 100000;
+let TiempoUnderProyector = 20000;
 //let TiempoUnderProyector = 1000;
 let proyectorMillisANT = 0;
 let Etapa = -1;
