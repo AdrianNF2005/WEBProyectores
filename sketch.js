@@ -2270,7 +2270,7 @@ function startVideo() {
   let videoURL = videos[currentVideoIndex];
   let videoID = extractVideoID(videoURL);
 
-  player = ("video-container", {
+  player = new YT.Player("video-container", {
     height: height,
     width: width,
     videoId: videoID,
