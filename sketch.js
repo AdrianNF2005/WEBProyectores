@@ -2270,7 +2270,7 @@ function startVideo() {
   let videoURL = videos[currentVideoIndex];
   let videoID = extractVideoID(videoURL);
 
-  player = new YT.Player("video-container", {
+  player = ("video-container", {
     height: height,
     width: width,
     videoId: videoID,
@@ -2310,13 +2310,18 @@ function InitialVideoYT() {
   // Cargar el video de YouTube usando la ID
   let videoURL = "https://youtu.be/2HEYjAXqmzA";
   let videoID = extractVideoID(videoURL);
-
+  
   player = new YT.Player("video-container", {
     height: height,
     width: width,
     videoId: videoID,
-    playerVars: { autoplay: 1, controls: 1 },
-    events: { onStateChange: onPlayerStateChange },
+    playerVars: { autoplay: 1, controls: 1, mute: 1 },
+    events: {
+      onReady: function(event) {
+        event.target.playVideo();
+      },
+      onStateChange: onPlayerStateChange
+    },
   });
 }
 
