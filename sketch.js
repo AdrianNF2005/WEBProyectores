@@ -2274,8 +2274,11 @@ function startVideo() {
     height: height,
     width: width,
     videoId: videoID,
-    playerVars: { autoplay: 1, controls: 1 },
-    events: { onStateChange: onPlayerStateChange },
+    playerVars: { autoplay: 1, controls: 1, mute: 1 },
+    events: {
+      onReady: function(event) { event.target.playVideo(); },
+      onStateChange: onPlayerStateChange
+    },
   });
 }
 
@@ -2381,8 +2384,11 @@ function BottomVideo() {
     height: "100%",
     width: "100%",
     videoId: videoID,
-    playerVars: { autoplay: 1, controls: 1 },
-    events: { onStateChange: onPlayerStateChange },
+    playerVars: { autoplay: 1, controls: 1, mute: 1 },
+    events: {
+      onReady: function(event) { event.target.playVideo(); },
+      onStateChange: onPlayerStateChange
+    },
   });
   }
 }
